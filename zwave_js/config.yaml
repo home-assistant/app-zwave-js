@@ -1,9 +1,9 @@
 ---
-version: 1.9.1
+version: dev
 slug: zwave_js
 name: Z-Wave JS
 description: Control a Z-Wave network with Home Assistant Z-Wave JS
-url: https://github.com/home-assistant/addons/tree/master/zwave_js
+url: https://github.com/home-assistant/app-zwave-js
 arch:
   - amd64
   - aarch64
@@ -11,7 +11,7 @@ discovery:
   - zwave_js
 hassio_api: true
 homeassistant: 2025.12.0
-image: homeassistant/{arch}-addon-zwave_js
+image: ghcr.io/home-assistant/app-zwave-js
 init: false
 ingress: true
 ingress_port: 8091
@@ -66,6 +66,5 @@ schema:
   disable_controller_recovery: bool?
   disable_watchdog: bool?
   safe_mode: bool?
-stage: stable
 startup: services
 timeout: 30
