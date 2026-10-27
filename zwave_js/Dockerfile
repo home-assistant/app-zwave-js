@@ -1,5 +1,5 @@
 # Base image updated by Renovate, update versionCompatibility on Alpine base bump
-ARG BUILD_FROM=ghcr.io/home-assistant/base:3.23-2026.10.2@sha256:5cbdecabcab9b3c80295402584b101bfc1864d343a226a8c790d71230a2eede9
+ARG BUILD_FROM=ghcr.io/home-assistant/base:3.23-2026.10.3@sha256:1550b137f45bbb61f932a5ec97265c1d8594ddc4a986b127fb06a5c8c4bcaa6d
 FROM ${BUILD_FROM}
 
 ARG ZWAVEJS_UI_VERSION=11.25.2
