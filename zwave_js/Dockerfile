@@ -2,7 +2,7 @@
 ARG BUILD_FROM=ghcr.io/home-assistant/base:3.23-2026.11.0@sha256:4c0c177f1b5072661cca81b97a1abc9f05121e9f2f649cdfcce8d15715fd80ea
 FROM ${BUILD_FROM}
 
-ARG ZWAVEJS_UI_VERSION=11.26.0
+ARG ZWAVEJS_UI_VERSION=11.26.2
 
 # Environment configuration
 ENV \
