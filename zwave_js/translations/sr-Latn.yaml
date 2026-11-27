@@ -1,0 +1,101 @@
+---
+configuration:
+  device:
+    name: Uređaj
+    description: Uređaj Z-Wave kontrolera.
+  socket:
+    name: Soket
+    description: >-
+      Umesto korišćenja fizičkog uređaja, možete se povezati sa Z-Wave
+      adapterom putem soketa.
+  log_level:
+    name: Nivo evidencije
+    description: Ova opcija podešava nivo beleženja događaja za Z-Wave JS.
+  log_to_file:
+    name: Čuvanje evidencije u datoteci?
+    description: >-
+      Kada je ova opcija uključena, zapisi će se čuvati u fascikli
+      `/addon_configs/core_zwave_js` sa ekstenzijom `.log`.
+  log_max_files:
+    name: Maksimalan broj datoteka evidencije
+    description: >-
+      Kada je opcija `log_to_file` uključena, Z-Wave JS kreira novu datoteku
+      evidencije za svaki dan. Ova opcija vam omogućava da odredite maksimalan
+      broj datoteka koje Z-Wave JS čuva.
+  network_key:
+    name: Mrežni ključ
+    description: >-
+      U prethodnim verzijama aplikacije ovo je bio jedini potreban ključ.
+      Uvođenjem S2 bezbednosnog uključivanja u zwave-js, ova opcija je
+      zastarela.
+  rf_region:
+    name: Radio-frekvencijski region
+    description: Radio-frekvencijski region koji kontroler treba da koristi.
+  s0_legacy_key:
+    name: Zastareli S0 ključ
+    description: >-
+      Z-Wave uređaji sa S0 bezbednošću zahtevaju mrežni ključ pre dodavanja u
+      mrežu.
+  s2_access_control_key:
+    name: S2 ključ za kontrolu pristupa
+    description: >-
+      Ovaj ključ je neophodan za dodavanje uređaja sa S2 Access Control
+      bezbednosnom klasom.
+  s2_authenticated_key:
+    name: S2 autentifikovani ključ
+    description: >-
+      Ovaj ključ je neophodan za dodavanje uređaja sa S2 Authenticated
+      bezbednosnom klasom.
+  s2_unauthenticated_key:
+    name: S2 neautentifikovani ključ
+    description: >-
+      Ovaj ključ je neophodan za dodavanje uređaja sa S2 Unauthenticated
+      bezbednosnom klasom.
+  lr_s2_access_control_key:
+    name: Z-Wave Long Range S2 ključ za kontrolu pristupa
+    description: >-
+      Ovaj ključ je neophodan za dodavanje uređaja koji koriste Z-Wave Long
+      Range sa S2 Access Control bezbednosnom klasom.
+  lr_s2_authenticated_key:
+    name: Z-Wave Long Range S2 autentifikovani ključ
+    description: >-
+      Ovaj ključ je neophodan za dodavanje uređaja koji koriste Z-Wave Long
+      Range sa S2 Authenticated bezbednosnom klasom.
+  soft_reset:
+    name: Soft resetovanje kontrolera serije 500
+    description: >-
+      Ovo podešavanje određuje kako aplikacija rukuje mekim resetovanjem za
+      kontrolere serije 500. Podrazumevana opcija, Automatski, nalaže aplikaciji
+      da sama prepozna da li ovu funkciju treba uključiti. Podrazumevana vrednost
+      odgovara većini korisnika, pa je menjajte samo ako znate šta radite i/ili
+      ako vam je to zatraženo.
+  disable_controller_recovery:
+    name: Onemogući automatski oporavak kontrolera
+    description: >-
+      Ovo podešavanje isključuje automatski proces oporavka u Z-Wave JS-u kada
+      kontroler prestane da reaguje i umesto toga prepušta kontroleru da se sam
+      oporavi, ukoliko je za to sposoban. Dok kontroler ne reaguje, komande će
+      početi da otkazuju, a čvorovi mogu nasumično biti označeni kao nedostupni.
+      Ako kontroler ne uspe sam da se oporavi, moraćete ponovo da pokrenete
+      aplikaciju. U većini slučajeva korisnicima ova opcija nikada neće biti
+      potrebna, pa je menjajte samo ako znate šta radite i/ili ako vam je to
+      zatraženo.
+  disable_watchdog:
+    name: Onemogući Z-Wave JS (hardverski) watchdog
+    description: >-
+      Ovo podešavanje sprečava Z-Wave JS da uključi hardverski watchdog na
+      kontrolerima koji ga podržavaju. U većini slučajeva korisnicima ova
+      opcija nikada neće biti potrebna, pa je menjajte samo ako znate šta
+      radite i/ili ako vam je to zatraženo.
+  safe_mode:
+    name: Omogući bezbedni režim
+    description: >-
+      Ovo podešavanje prebacuje vašu mrežu u bezbedni režim, što može značajno
+      smanjiti performanse vaše mreže, ali takođe može pomoći da se mreža
+      pokrene i proradi kako biste mogli da rešite probleme, preuzmete
+      evidenciju (logove) itd. U većini slučajeva korisnicima ova opcija nikada
+      neće biti potrebna, pa je menjajte samo ako znate šta radite i/ili ako
+      vam je to zatraženo.
+network:
+  3000/tcp: Z-Wave JS WebSocket komunikacioni port
+  8091/tcp: Z-Wave JS UI veb port
